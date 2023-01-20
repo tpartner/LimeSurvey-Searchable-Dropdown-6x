@@ -1,0 +1,58 @@
+{#
+/**
+ * List DropDown select Html
+ *
+ * @var $sOptions         : the select options, generated with the view item_options.php
+ * @var $sOther           : the other input field, generated with the view item_noanswer.php
+ *
+ * @var $name
+ * @var $dropdownSize
+ * @var $checkconditionFunction
+ * @var $select_show_hide
+ *
+ */
+#}
+
+
+<!-- List Dropdown -->
+
+<!-- answer-->
+
+<!-- answer-->
+<div class="mb-3 row g-1 align-items-center {{ coreClass }}">
+    <div class="col-auto">
+        <select
+                class="form-select form-control list-question-select"
+                name="{{ name }}"
+                id="answer{{ name }}"
+                {% if dropdownSize %} size={{ dropdownSize }} {% endif %}
+                aria-labelledby="ls-question-text-{{ basename }}"
+        >
+                {# rows/option.php #}
+                {{ sOptions }}
+        </select>
+    </div>
+        {# rows/othertext.php #}
+        {{ sOther }}
+
+    {# Value for expression manager javascript (use id) ; no need to submit #}
+    {{ C.Html.hiddenField("java"~name,value,({
+        'id' : "java"~name,
+        'disabled' : "disabled",
+    }))
+    }}
+</div>
+
+{# registerPackage('bootstrap-select2') #}
+{{ registerPackage('select2') }}
+{# registerPackage('select2-bootstrap-5-theme') #}
+
+<script type="text/javascript" charset="utf-8">
+
+	$(document).on('ready pjax:scriptcomplete',function(){
+		
+		initSSD('{{name}}'); 
+		
+	});
+</script>
+<!-- end of answer  -->

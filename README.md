@@ -10,9 +10,9 @@ Compatible with LimeSurvey version 6.x.
 1) - Extract the download, compress (zip) the *Searchable-Dropdown* folder and import via the theme manager.
 
 2) - Create a "Searchable Dropdown" question, click Save.
-    ![Image Searchable-Dropdown](/Searchable-Dropdown/survey/questions/answer/list_dropdown/assets/images/ssd_6x-2.png)
+    ![Image Searchable-Dropdown](/Searchable-Dropdown/survey/questions/answer/list_dropdown/assets/images/ssd_6x_2.png)
 
-3)Create answers as required.
+3) - Create answers as required.
 
 **Notes:**
 
